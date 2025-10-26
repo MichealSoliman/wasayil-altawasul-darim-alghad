@@ -3,418 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تواصل معنا</title>
+    <title>تواصل معنا - دريم الغد</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        *{
             font-family: 'Cairo', sans-serif;
-        }
-        body {
-         
-           
-
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
-            color: #333;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .social-section {
-            max-width: 1000px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 60px 40px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .social-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: #001d5c;
-        }
-        
-        .section-title {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            color: #001d5c;
-            position: relative;
-            display: inline-block;
-            font-weight: 700;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            right: 50%;
-            transform: translateX(50%);
-            width: 100px;
-            height: 5px;
-            background: #001d5c;
-            border-radius: 3px;
-        }
-        
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            margin-bottom: 70px;
-            max-width: 700px;
-            margin-right: auto;
-            margin-left: auto;
-            line-height: 1.8;
-        }
-        
-        .social-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .social-card {
-            background: white;
-            border-radius: 16px;
-            padding: 50px 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            border: 2px solid #f0f0f0;
-        }
-        
-        .social-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 29, 92, 0.05);
-            z-index: -1;
-            transition: all 0.4s ease;
-            opacity: 0;
-        }
-        
-        .social-card:hover::before {
-            opacity: 1;
-        }
-        
-        .social-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            border-color: #001d5c;
-        }
-        
-        .social-icon {
-            width: 90px;
-            height: 90px;
-            margin: 0 auto 25px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            color: white;
-            transition: all 0.4s ease;
-            position: relative;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .social-card:hover .social-icon {
-            transform: scale(1.1);
-        }
-        
-        .phone .social-icon {
-            background: linear-gradient(135deg, #001d5c, #0033a0);
-        }
-        
-        .whatsapp .social-icon {
-            background: linear-gradient(135deg, #25D366, #128C7E);
-        }
-        
-        .facebook .social-icon {
-            background: linear-gradient(135deg, #3b5998, #1877f2);
-        }
-        
-        .instagram .social-icon {
-            background: linear-gradient(135deg, #e1306c, #c13584, #833ab4);
-        }
-        
-        .snapchat .social-icon {
-            background: linear-gradient(135deg, #FFFC00, #FFD700);
-            color: #000;
-        }
-        .tiktok .social-icon {
-     background: #000;
-    color: #fff;
-}
-
-        
-        .social-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 18px;
-            color: #001d5c;
-            font-weight: 600;
-        }
-        
-        .social-card p {
-            color: #7f8c8d;
-            margin-bottom: 30px;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-        
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 30px;
-            background: transparent;
-            color: #001d5c;
-            border: 2px solid #001d5c;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            
-        }
-        
-        .social-link::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 0;
-            height: 100%;
-            background: #001d5c;
-            transition: all 0.4s ease;
-            z-index: -1;
-        }
-        
-        .social-link:hover::before {
-            width: 100%;
-        }
-        
-        .social-link:hover {
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 7px 15px rgba(0, 29, 92, 0.3);
-        }
-        
-        .social-link i {
-            margin-left: 8px;
-            transition: all 0.3s ease;
-            margin-right: 10px;
-        }
-        
-        .social-link:hover i {
-            transform: translateX(5px);
-        }
-        
-        .contact-info {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 6px 15px;
-            background: #f8f9fa;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: #7f8c8d;
-            font-weight: 500;
-        }
-        
-        @media (max-width: 768px) {
-            .social-cards {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-                margin: 40px auto 0;
-            }
-            
-            .section-title {
-                font-size: 2.2rem;
-            }
-            
-            .section-subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .social-section {
-                padding: 50px 25px;
-            }
-        }
-        
-        .floating-icons {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 0;
-            pointer-events: none;
-        }
-        
-        .floating-icon {
-            position: absolute;
-            font-size: 24px;
-            opacity: 0.1;
-            color: #001d5c;
-            animation: float 15s infinite linear;
-        }
-        
-        @keyframes float {
-            0% {
-                transform: translateY(0) rotate(0deg);
-            }
-            100% {
-                transform: translateY(-1000px) rotate(360deg);
-            }
         }
     </style>
 </head>
-<body>
-    <section class="social-section">
-        <div class="floating-icons">
-            <!-- سيتم إضافة الأيقونات العائمة عبر JavaScript -->
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex flex-col items-center p-4">
+    <!-- شريط التواصل العلوي -->
+    <div class="w-full max-w-4xl bg-white rounded-xl shadow-md mt-4 mb-8">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <!-- اسم الشركة واللوجو -->
+                <div class="flex items-center space-x-2 space-x-reverse">
+                    <div class="w-12 h-12   flex items-center justify-center text-white font-bold text-xl">
+                        <img src="./img/logo-dirim-alghad.png " class="" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-blue-800">دريم الغد</h1>
+                        <p class="text-gray-600 text-sm">شركة رائدة في مجال النظافة</p>
+                    </div>
+                </div>
+                
+               <a href="https://drymalghd.com/" target="_blank"
+   class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition duration-300 flex items-center gap-2">
+    <i class="fas fa-globe text-xl"></i>
+    قم بزيارة موقعنا
+</a>
+
+            </div>
         </div>
-        
-        <h2 class="section-title">تواصل معنا</h2>
-        <p class="section-subtitle">تواصل معنا عبر مختلف قنوات التواصل للحصول على خدمة أسرع وإجابات لاستفساراتك</p>
-        
-        <div class="social-cards">
-            <!-- اتصال -->
-            <div class="social-card phone">
-                <div class="social-icon">
-                    <i class="fas fa-phone-alt"></i>
-                </div>
-                <h3>اتصال هاتفي</h3>
-                <p>اتصل بنا مباشرة للاستفسار عن خدماتنا وأحدث العروض المتاحة</p>
-                <a href="tel:0542344956" class="social-link">
-                    اتصل بنا <i class="fas fa-phone"></i>
-                </a>
-                <div class="contact-info">
-                    <i class="far fa-clock"></i> متاح من ٩ صباحاً حتى ٦ مساءً
-                </div>
-            </div>
-            
-            <!-- واتساب -->
-            <div class="social-card whatsapp">
-                <div class="social-icon">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-                <h3>واتساب</h3>
-                <p>راسلنا على واتساب للحصول على رد سريع واستفسارات فورية</p>
-                <a href="https://wa.me/0542344756" class="social-link">
-                    راسلنا <i class="fab fa-whatsapp"></i>
-                </a>
-                <div class="contact-info">
-                    <i class="fas fa-bolt"></i> رد فوري خلال دقائق
-                </div>
-            </div>
-            
-            <!-- فيسبوك -->
-            <div class="social-card facebook">
-                <div class="social-icon">
-                    <i class="fab fa-facebook"></i>
-                </div>
-                <h3> فيسبوك</h3>
-                <p>راسلنا على فيسبوك ماسنجر لمشاركة استفساراتك وآرائك</p>
-                <a href="https://www.facebook.com/dream.alghad/" class="social-link">
-                    تواصل معنا <i class="fab fa-facebook-messenger"></i>
-                </a>
-                <div class="contact-info">
-                    <i class="fas fa-comment"></i> دردشة مباشرة
-                </div>
-            </div>
-            
-            <!-- إنستغرام -->
-            <div class="social-card instagram">
-                <div class="social-icon">
-                    <i class="fab fa-instagram"></i>
-                </div>
-                <h3>إنستغرام</h3>
-                <p>تواصل معنا على إنستغرام لمشاهدة محتوانا الحصري والتفاعل معنا</p>
-                <a href="https://www.instagram.com/dream_alghad/#" class="social-link">
-                    تواصل معنا <i class="fab fa-instagram"></i>
-                </a>
-                <div class="contact-info">
-                    <i class="far fa-images"></i> محتوى مرئي حصري
-                </div>
-            </div>
-            
-            <!-- سناب شات -->
-            <div class="social-card snapchat">
-                <div class="social-icon">
-                    <i class="fab fa-snapchat-ghost"></i>
-                </div>
-                <h3>سناب شات</h3>
-                <p>تواصل معنا على سناب شات لمحتوى يومي حصري خلف الكواليس</p>
-                <a href="https://www.snapchat.com/@dream_alghad?share_id=5zFy3s3Ko3s&locale=ar-EG" class="social-link">
-                    تواصل معنا <i class="fab fa-snapchat-ghost"></i>
-                </a>
-                <div class="contact-info">
-                    <i class="fas fa-ghost"></i> محتوى حصري يومي
-                </div>
-            </div>
-
-            <!-- TikTok -->
-<div class="social-card tiktok">
-    <div class="social-icon">
-        <i class="fab fa-tiktok"></i>
     </div>
-    <h3>تيك توك</h3>
-    <p>تابعنا على تيك توك لمشاهدة أحدث الفيديوهات والعروض</p>
-    <a href="https://www.tiktok.com/@dream_alghad?lang=ar" class="social-link ">
-        تواصل معنا <i class="fab fa-tiktok"></i>
-    </a>
-    <div class="contact-info">
-        <i class="fas fa-video"></i> فيديوهات يومية
-    </div>
-</div>
 
+    <!-- قسم وسائل التواصل الرئيسي -->
+    <section class="bg-white rounded-2xl shadow-xl max-w-4xl w-full overflow-hidden">
+        <!-- الشريط العلوي الملون -->
+        <div class="h-2 bg-blue-800"></div>
+        
+        <!-- المحتوى الرئيسي -->
+        <div class="p-8 md:p-12 relative">
+            <!-- العنوان والوصف -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4 relative inline-block">
+                    تواصل معنا
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    تواصل معنا عبر مختلف قنوات التواصل للحصول على خدمة أسرع وإجابات لاستفساراتك
+                </p>
+            </div>
+            
+            <!-- شبكة الأيقونات - تصميم عمودي -->
+            <div class="max-w-2xl mx-auto space-y-6">
+                <!-- سناب شات -->
+                <a href="https://www.snapchat.com/@dream_alghad?share_id=5zFy3s3Ko3s&locale=ar-EG" 
+                   class="flex items-center bg-white rounded-xl p-5 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-300 to-yellow-500 flex items-center justify-center text-black text-2xl ml-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-snapchat-ghost"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-blue-800 text-xl mb-1">سناب شات</h3>
+                        <p class="text-gray-600">محتوى يومي حصري خلف الكواليس</p>
+                    </div>
+                    <div class="text-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                </a>
+                
+                <!-- تيك توك -->
+                <a href="https://www.tiktok.com/@dream_alghad?lang=ar" 
+                   class="flex items-center bg-white rounded-xl p-5 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-16 h-16 rounded-full bg-black flex items-center justify-center text-white text-2xl ml-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-blue-800 text-xl mb-1">تيك توك</h3>
+                        <p class="text-gray-600">أحدث الفيديوهات والعروض</p>
+                    </div>
+                    <div class="text-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                </a>
+                
+                <!-- إنستغرام -->
+                <a href="https://www.instagram.com/dream_alghad/#" 
+                   class="flex items-center bg-white rounded-xl p-5 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white text-2xl ml-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-blue-800 text-xl mb-1">إنستغرام</h3>
+                        <p class="text-gray-600">محتوى مرئي حصري</p>
+                    </div>
+                    <div class="text-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                </a>
+                
+                <!-- فيسبوك -->
+                <a href="https://www.facebook.com/dream.alghad/" 
+                   class="flex items-center bg-white rounded-xl p-5 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center text-white text-2xl ml-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-blue-800 text-xl mb-1">فيسبوك</h3>
+                        <p class="text-gray-600">دردشة مباشرة واستفسارات</p>
+                    </div>
+                    <div class="text-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                </a>
+                
+                <!-- موقع الويب -->
+                <a href="https://drymalghd.com/" 
+                   class="flex items-center bg-white rounded-xl p-5 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-16 h-16 rounded-full bg-blue-800 flex items-center justify-center text-white text-2xl ml-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-blue-800 text-xl mb-1">موقع الويب</h3>
+                        <p class="text-gray-600">تعرف على خدماتنا وعروضنا</p>
+                    </div>
+                    <div class="text-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                </a>
+                
+
+                
+                <!-- واتساب -->
+                <a href="https://wa.me/0542344756" 
+                   class="flex items-center bg-white rounded-xl p-5 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center text-white text-2xl ml-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-blue-800 text-xl mb-1">واتساب</h3>
+                        <p class="text-gray-600">رد فوري خلال دقائق</p>
+                    </div>
+                    <div class="text-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
 
-    <script>
-        // إضافة أيقونات عائمة في الخلفية
-        document.addEventListener('DOMContentLoaded', function() {
-            const floatingIcons = document.querySelector('.floating-icons');
-            const icons = ['fa-phone', 'fa-comment', 'fa-mobile', 'fa-comments', 'fa-headset', 'fa-envelope', 'fa-paper-plane'];
-            
-            for (let i = 0; i < 20; i++) {
-                const icon = document.createElement('i');
-                icon.className = `floating-icon fas ${icons[Math.floor(Math.random() * icons.length)]}`;
-                icon.style.left = `${Math.random() * 100}%`;
-                icon.style.top = `${Math.random() * 100}%`;
-                icon.style.fontSize = `${Math.random() * 20 + 15}px`;
-                icon.style.animationDuration = `${Math.random() * 20 + 15}s`;
-                icon.style.animationDelay = `${Math.random() * 5}s`;
-                floatingIcons.appendChild(icon);
-            }
-        });
-    </script>
+    <!-- الأيقونات الإضافية في الأسفل -->
+    <div class="max-w-4xl w-full mt-8 flex justify-center space-x-6 space-x-reverse">
+        <!-- أيقونة جوجل ماب -->
+        <a href="https://share.google/fT22bP8f6l3WFb6vi" class="bg-white border-2 border-blue-800 rounded-full w-16 h-16 flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-blue-800 hover:text-blue-600">
+            <i class="fas fa-map-marker-alt text-xl"></i>
+        </a>
+        
+        <!-- أيقونة واتساب -->
+        <a href="https://wa.me/0542344956" class="bg-white rounded-full w-16 h-16 border-2 border-blue-800 flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-green-500 hover:text-green-600">
+            <i class="fab fa-whatsapp text-xl"></i>
+        </a>
+        
+        <!-- أيقونة لينك الموقع -->
+        <a href="https://dream-alghad.com" class="bg-white rounded-full w-16 h-16 border-2 border-blue-800 flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-blue-800 hover:text-blue-600">
+            <i class="fas fa-link text-xl"></i>
+        </a>
+    </div>
 </body>
 </html>
